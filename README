@@ -1,1 +1,19 @@
 My lib js
+<br>
+$(selector).alignSize(params, modify); // if no flexbox. align size DOM-elements
+<br>
+in_array(needle, haystack, argStrict); // boolean
+<br>
+$(form).serializeObject(); // object
+<br>
+throw new ResultError('error message'); // exception
+<br>
+scrollToBlock(selector); // search block and scroll
+<br>
+serialize(array); // string
+unserialize(string); // array
+<br>
+sleep(ms); // delay
+<br>
+startFunc(name); // start function from string
+<br>
