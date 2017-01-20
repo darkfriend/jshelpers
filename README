@@ -1,11 +1,11 @@
-#My lib js
+# My lib js
 
-* ```javascript $(selector).alignSize(params, modify); // if no flexbox. align size DOM-elements```
-* ```javascript in_array(needle, haystack, argStrict); // boolean ```
-* ```javascript $(form).serializeObject(); // object ```
-* ```javascript throw new ResultError('error message'); // exception ```
-* ```javascript scrollToBlock(selector); // search block and scroll ```
-* ```javascript serialize(array); // string ```
-* ```javascript unserialize(string); // array ```
-* ```javascript sleep(ms); // delay ```
-* ```javascript startFunc(name); // start function from string ```
+* $(selector).alignSize(params, modify); // if no flexbox. align size DOM-elements
+* in_array(needle, haystack, argStrict); // boolean
+* $(form).serializeObject(); // object
+* throw new ResultError('error message'); // exception
+* scrollToBlock(selector); // search block and scroll
+* serialize(array); // string
+* unserialize(string); // array
+* sleep(ms); // delay
+* startFunc(name); // start function from string
