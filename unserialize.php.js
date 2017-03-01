@@ -1,4 +1,4 @@
-function unserialize ( inp ) {	// Creates a PHP value from a stored representation
+export function unserialize ( inp ) {	// Creates a PHP value from a stored representation
 	error = 0;
 	if (inp == "" || inp.length < 2) {
 		errormsg = "input is too short";

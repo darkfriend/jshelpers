@@ -9,7 +9,7 @@
  * @example startFunc('test');
  * @returns {boolean}
  */
-function startFunc(name){
+export function startFunc(name){
 	if(name && typeof window[name] == 'function'){
         window[name]();
     } else if(debug){

@@ -1,4 +1,4 @@
-function serialize (mixed_value) {
+export function serialize (mixed_value) {
   //   example 1: serialize(['Kevin', 'van', 'Zonneveld']);
   //   returns 1: 'a:3:{i:0;s:5:"Kevin";i:1;s:3:"van";i:2;s:9:"Zonneveld";}'
   //   example 2: serialize({firstName: 'Kevin', midName: 'van', surName: 'Zonneveld'});

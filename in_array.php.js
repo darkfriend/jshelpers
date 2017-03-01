@@ -1,4 +1,4 @@
-function in_array (needle, haystack, argStrict) {
+export function in_array (needle, haystack, argStrict) {
   //   example 1: in_array('van', ['Kevin', 'van', 'Zonneveld']);
   //   returns 1: true
   //   example 2: in_array('vlado', {0: 'Kevin', vlado: 'van', 1: 'Zonneveld'});

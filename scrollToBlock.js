@@ -4,7 +4,7 @@
  * @author darkfriend
  * @param {string} selector
  */
-function scrollToBlock(selector){
+export function scrollToBlock(selector){
     if($(selector).length){
         var pos = $(selector).offset();
         $('body').animate({scrollTop:pos.top}, 300);
