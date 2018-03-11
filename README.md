@@ -11,6 +11,7 @@
     * ` array_count(arr); ` // integer
     * ` rand(min=0,max=99999); ` // integer
     * ` 'you string'.replacer(replaceObject); ` // string
+    * ` number_format(number, decimals=2, dec_point=".", thousands_sep=" "); ` // number
 * es5
     * ` throw new ResultError('error message');`  // exception
 * jquery
