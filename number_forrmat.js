@@ -1,5 +1,5 @@
 /**
- *
+ * @author not i
  * @param {number} number
  * @param {int} decimals
  * @param {string} dec_point

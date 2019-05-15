@@ -9,5 +9,5 @@
  * @use throw new ResultError('error message');
  */
 export class ResultError extends Error {
-    name : "ResultError";
+    static name = "ResultError";
 }

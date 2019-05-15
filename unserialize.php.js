@@ -1,13 +1,14 @@
 export function unserialize ( inp ) {	// Creates a PHP value from a stored representation
-	error = 0;
+	let error = 0;
+	let errormsg;
 	if (inp == "" || inp.length < 2) {
 		errormsg = "input is too short";
 		return;
 	}
-	var val, kret, vret, cval;
-	var type = inp.charAt(0);
-	var cont = inp.substring(2);
-	var size = 0, divpos = 0, endcont = 0, rest = "", next = "";
+	let val, kret, vret, cval;
+	let type = inp.charAt(0);
+	let cont = inp.substring(2);
+	let size = 0, divpos = 0, endcont = 0, rest = "", next = "";
 
 	switch (type) {
 	case "N": // null
@@ -52,8 +53,8 @@ export function unserialize ( inp ) {	// Creates a PHP value from a stored repre
 		break;
 	case "i": // integer
 	case "d": // float
-		var dotfound = 0;
-		for (var i = 0; i < cont.length; i++) {
+		let dotfound = 0;
+		for (let i = 0; i < cont.length; i++) {
 			cval = cont.charAt(i);
 			if (isNaN(parseInt(cval)) && !(type == "d" && cval == "." && !dotfound++)) {
 				endcont = i;
@@ -84,7 +85,7 @@ export function unserialize ( inp ) {	// Creates a PHP value from a stored repre
 			errormsg = "array is too short";
 			return;
 		}
-		for (var i = 0; i + 1 < size * 2; i += 2) {
+		for (let i = 0; i + 1 < size * 2; i += 2) {
 			kret = unserialize(cont, 1);
 			if (error || kret[0] == undefined || kret[1] == "") {
 				errormsg = "missing or invalid key, or missing value for array";
@@ -111,19 +112,19 @@ export function unserialize ( inp ) {	// Creates a PHP value from a stored repre
 			return;
 		}
 		size = parseInt(cont.substring(0, divpos));
-		var objname = cont.substring(divpos + 2, divpos + 2 + size);
+		let objname = cont.substring(divpos + 2, divpos + 2 + size);
 		if (cont.substring(divpos + 2 + size, divpos + 4 + size) != "\":") {
 			errormsg = "object name is too long, or missing \":";
 			return;
 		}
-		var objprops = unserialize("a:" + cont.substring(divpos + 4 + size), 1);
+		let objprops = unserialize("a:" + cont.substring(divpos + 4 + size), 1);
 		if (error) {
 			errormsg = "invalid object properties";
 			return;
 		}
 		rest = objprops[1];
-		var objout = "function " + objname + "(){";
-		for (key in objprops[0]) {
+		let objout = "function " + objname + "(){";
+		for (let key in objprops[0]) {
 			objout += "" + key + "=objprops[0]['" + key + "'];";
 		}
 		objout += "}val=new " + objname + "();";

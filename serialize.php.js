@@ -4,7 +4,7 @@ export function serialize (mixed_value) {
   //   example 2: serialize({firstName: 'Kevin', midName: 'van', surName: 'Zonneveld'});
   //   returns 2: 'a:3:{s:9:"firstName";s:5:"Kevin";s:7:"midName";s:3:"van";s:7:"surName";s:9:"Zonneveld";}'
 
-  var val, key, okey,
+  let val, key, okey,
     ktype = '',
     vals = '',
     count = 0,

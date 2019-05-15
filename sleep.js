@@ -1,6 +1,6 @@
 /**
  * Sleep in js
- * @param {integer} ms milliseconds
+ * @param {number} ms milliseconds
  * @example sleep(1000) - delay in 1 second
  */
 export function sleep(ms) {

@@ -6,15 +6,16 @@
  * Если функции нет, то false. Если глобальная переманная debug = true, то пишет в консоль.
  * Я её использую для динамичного вызова разных функций, название которых берется из DOM-объекта (например: data-func) в разных сторонних плагинах и библиотеках. 
  * @param {string} name - name function
+ * @param {boolean} debug
  * @example startFunc('test');
  * @returns {boolean}
  */
-export function startFunc(name){
+export function startFunc(name,debug=false){
 	if(name && typeof window[name] == 'function'){
-        window[name]();
-    } else if(debug){
-    	console.log('Function '+name+' not found');
-    } else {
-    	return false;
-    }
+		window[name]();
+	} else if(debug){
+		console.log('Function '+name+' not found');
+	} else {
+		return false;
+	}
 }
