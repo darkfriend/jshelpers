@@ -1,4 +1,4 @@
-# Javascript helpers
+# JavaScript Helpers
 
 * es6
     * ` in_array(needle, haystack, argStrict); // boolean `
@@ -19,12 +19,12 @@
     * ``` $(selector).alignSize(params, modify); ``` // if no flexbox. align size DOM-elements
     * `` $(form).serializeObject(); `` // object
     
-## How use es5 from es6?
+## How to use es5 from es6?
 
 1. Remove word ```export and let/const```
 1. Use webpack or gulp or babel or etc.
 
-## How use?
+## How to use?
 
 ``import {#method_name1#,#method_name2#} from '#path_to_file#' ``
 
