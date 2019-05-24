@@ -6,7 +6,7 @@
  * @param {string} thousands_sep
  * @returns {string}
  */
-function number_format( number, decimals=2, dec_point=".", thousands_sep=" " ) {
+export function number_format( number, decimals=2, dec_point=".", thousands_sep=" " ) {
 
     let i, j, kw, kd, km;
 

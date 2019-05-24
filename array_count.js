@@ -3,6 +3,6 @@
  * @param {object|array} arr
  * @returns {number}
  */
-export default function array_count(arr) {
+export function array_count(arr) {
     return Object.values(arr).length;
 }

@@ -5,7 +5,7 @@
  * @param {boolean} argStrict
  * @return {boolean}
  */
-export default function in_array (needle, haystack, argStrict=false) {
+export function in_array (needle, haystack, argStrict=false) {
   //   example 1: in_array('van', ['Kevin', 'van', 'Zonneveld']);
   //   returns 1: true
   //   example 2: in_array('vlado', {0: 'Kevin', vlado: 'van', 1: 'Zonneveld'});
