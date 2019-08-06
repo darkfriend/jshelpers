@@ -18,9 +18,10 @@
 * jquery
     * ``` $(selector).alignSize(params, modify); ``` // if no flexbox. align size DOM-elements
     * `` $(form).serializeObject(); `` // object
-    
+
 ## How to use es5 from es6?
 
+1. Copy file
 1. Remove word ```export and let/const```
 1. Use webpack or gulp or babel or etc.
 
@@ -31,7 +32,7 @@
 ## Check empty (javascript)
 
 ```javascript
-import empty from "./empty.js";
+import {empty} from "darkfriend/jshelpers/empty.js";
 let variable;
 empty(variable); // true
 
